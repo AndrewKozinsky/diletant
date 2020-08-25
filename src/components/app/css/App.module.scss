@@ -1,0 +1,26 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top:20px;
+    padding-bottom: 25px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.pageContent {
+    margin-bottom: auto;
+}
+
+
+@media (min-width: 450px) {
+    .pageWrapper {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 700px) {
+    .pageWrapper {
+        padding-bottom: 35px;
+    }
+}

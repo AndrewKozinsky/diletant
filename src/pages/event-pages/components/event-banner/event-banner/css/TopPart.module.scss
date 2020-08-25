@@ -1,0 +1,305 @@
+@import "../../../../../../components/app/css/variables";
+
+.generalWrapper {
+    margin-top: -10px;
+}
+
+// Верхняя обёртка
+.wrapper {
+    position: relative;
+
+    &:before {
+        content:"";
+        display:block;
+        padding-top: 114%;
+        transition: padding-top $banner-animation-duration;
+    }
+}
+
+@media (min-width: 400px) {
+    .wrapper:before {
+        padding-top: 94%;
+    }
+
+    :global(.eventPage) {
+        .wrapper:before {
+            padding-top: 105%;
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    .wrapper:before {
+        padding-top: 84%;
+    }
+
+    :global(.eventPage) {
+        .wrapper:before {
+            padding-top: 98%;
+
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .wrapper:before {
+        padding-top: 70%;
+    }
+
+    :global(.eventPage) {
+        .wrapper:before {
+            padding-top: 78%;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .wrapper:before {
+        padding-top: 60%;
+    }
+
+    :global(.eventPage) {
+        .wrapper:before {
+            padding-top: 66%;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .wrapper:before {
+        padding-top: 500px;
+    }
+
+    :global(.eventPage) {
+        .wrapper:before {
+            padding-top: 570px;
+        }
+    }
+}
+
+
+// Секция названия города
+.citySectionFirst, .citySectionSecond {
+    position: absolute;
+    top: 180px;
+    display: none;
+    transition: top $banner-animation-duration;
+}
+
+.citySectionFirst {
+    left: 0;
+    z-index: 2;
+    width: calc(100% - 500px);
+}
+.citySectionSecond {
+    left: calc(100% - 100px);
+    opacity: 1;
+    transition: left $banner-animation-duration, opacity $banner-animation-duration;
+}
+
+:global(.eventPage) {
+    .citySectionFirst, .citySectionSecond {
+        top: 210px;
+    }
+
+    .citySectionSecond {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .citySectionFirst, .citySectionSecond {
+        display: block;
+    }
+}
+
+.city_1, .city_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6.2rem;
+    line-height: 7rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba($text-color, 0);
+    user-select: none;
+    -webkit-text-stroke: 1px $text-color;
+    transition: font-size $banner-animation-duration, line-height $banner-animation-duration;
+}
+
+:global(.eventPage) {
+    .city_1, .city_2 {
+        font-size: 6.8rem;
+        line-height: 7.6rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .city_1, .city_2 {
+        font-size: 6.8rem;
+        line-height: 7.2rem;
+    }
+
+    :global(.eventPage) {
+        .city_1, .city_2 {
+            font-size: 7.6rem;
+            line-height: 8.2rem;
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    .city_1, .city_2 {
+        font-size: 7.2rem;
+        line-height: 7.6rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .citySectionFirst, .citySectionSecond {
+        top: 120px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .citySectionFirst, .citySectionSecond {
+        top: 150px;
+    }
+}
+
+:global(._1_show__2_hide) {
+    .city_2 {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+    }
+}
+:global(._1_hide__2_show) {
+    .city_1 {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+    }
+}
+:global(._2_hide__1_show) {
+    .city_2 {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+    }
+}
+:global(._2_show__1_hide) {
+    .city_1 {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+    }
+}
+:global(.trn) {
+    .city_1, .city_2 {
+        transition: color .15s, transform $banner-animation-duration $cubic-bezier, opacity $banner-animation-duration $cubic-bezier;
+    }
+}
+
+
+// Секция темы лекции
+.themeSection {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 50px;
+    width: calc(100% - 500px);
+}
+
+@media (min-width: 1150px) {
+    .themeSection {
+        display: block;
+    }
+}
+
+.theme_1, .theme_2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+}
+
+:global(._1_show__2_hide) {
+    .theme_2 {
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+        pointer-events: none;
+    }
+    .theme_2 {
+        pointer-events: auto;
+    }
+}
+:global(._1_hide__2_show) {
+    .theme_1 {
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+        pointer-events: none;
+    }
+    .theme_2 {
+        pointer-events: auto;
+    }
+}
+:global(._2_hide__1_show) {
+    .theme_2 {
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+        pointer-events: none;
+    }
+    .theme_1 {
+        pointer-events: auto;
+    }
+}
+:global(._2_show__1_hide) {
+    .theme_1 {
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+        pointer-events: none;
+    }
+    .theme_1 {
+        pointer-events: auto;
+    }
+}
+
+:global(.trn) {
+    .theme_1, .theme_2 {
+        transition: color .15s, transform $banner-animation-duration $cubic-bezier, opacity $banner-animation-duration $cubic-bezier;
+    }
+}
+
+.speaker, .themeText {
+    span {
+        color: $link-color;
+        border-bottom: 1px solid $link-border-color;
+        transition: border-bottom-color .25s;
+        cursor: pointer;
+
+        &:hover {
+            color: $link-color-hover;
+            border-bottom: 1px solid $link-border-color-hover;
+            transition: border-bottom-color .1s;
+        }
+    }
+}
+
+.speaker {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 5px;
+}
+.themeText {
+    font-size: 4.2rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+}

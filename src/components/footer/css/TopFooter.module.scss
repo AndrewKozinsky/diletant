@@ -1,0 +1,54 @@
+.footerWrapper {
+    position: relative;
+}
+
+.sectionWrapper {
+    margin-top: 4rem;
+}
+.header {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.socialButtons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-bottom: 35px;
+}
+@media (min-width: 650px) {
+    .socialButtons {
+        margin-bottom: 40px;
+    }
+}
+
+.socialBtn {
+    width: 52px;
+    height: 52px;
+
+    background-size: 48px 48px;
+}
+
+.grid {
+
+}
+@media (min-width: 650px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+}
+
+.grid__leftCell {
+    margin-bottom: 20px;
+}
+.grid__rightCell {
+
+}
+
+.newsDescriptionText {
+    font-weight: 600;
+}

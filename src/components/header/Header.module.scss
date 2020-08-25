@@ -1,0 +1,116 @@
+@import "../app/css/variables";
+
+.wrapper {
+    z-index: 2;
+
+    display: grid;
+    grid-row-gap: 12px;
+    grid-template-areas: "first"
+        "second"
+        "third";
+
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+
+    & > *:nth-child(1) {
+        grid-area: first;
+    }
+    & > *:nth-child(2) {
+        grid-area: second;
+    }
+    & > *:nth-child(3) {
+        grid-area: third;
+    }
+}
+
+.logoBlock {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.logoBlock--active {
+    a {
+        color: $active-color;
+        border-color: $active-color-border;
+
+        &:hover {
+            color: $active-color-hover;
+            border-color: $active-color-hover-border;
+        }
+    }
+}
+
+.navBlock {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-right: 2rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.navLink--active {
+    color: $active-color;
+    border-color: $active-color-border;
+
+    &:hover {
+        color: $active-color-hover;
+        border-color: $active-color-hover-border;
+    }
+}
+
+.btnsBlock {
+    display: none;
+}
+
+
+@media (min-width: 480px) {
+    .wrapper {
+        grid-template-areas: "first first"
+        "second third";
+    }
+
+    .logoBlock {
+        margin-bottom: 0;
+    }
+
+    .btnsBlock {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 700px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logoBlock {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+
+    .navBlock {
+        margin-left: auto;
+    }
+
+    .btnsBlock {
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .btnsBlock {
+        margin-left: 4rem;
+    }
+}

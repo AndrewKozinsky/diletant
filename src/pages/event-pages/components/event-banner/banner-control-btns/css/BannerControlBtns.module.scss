@@ -1,0 +1,18 @@
+@import "../../../../../../components/app/css/variables";
+
+// Кнопки
+.slideButtons {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    right: 0;
+    opacity: 1;
+    transition: right $banner-animation-duration, opacity $banner-animation-duration;
+}
+
+:global(.eventPage) {
+    .slideButtons {
+        opacity: 0;
+        right: -200px;
+    }
+}

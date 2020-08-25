@@ -1,0 +1,55 @@
+@import "../../../../app/css/variables";
+
+.wrapper {
+    position: relative;
+}
+
+.topRect {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: stretch;
+
+    background-color: white;
+    border: 1px solid $text-color;
+}
+
+.bottomRect {
+    position: absolute;
+    top: 3px;
+    bottom: -3px;
+    left: 3px;
+    right: -3px;
+    border: 1px solid $text-color;
+}
+
+.emailInput {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    width: 100%;
+    padding: 4px 6px 4px 12px;
+    border: none;
+
+    &::placeholder {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: lighten($text-color, 50%);
+    }
+}
+
+.verticalHr {
+    position: relative;
+    width: 1px;
+    background-color: $text-color;
+    margin: 5px 0;
+}
+
+.submitBtn {
+    display: block;
+    width: 50px;
+    background-color: white;
+    border: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="18px" height="10px" viewBox="0 0 18 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="rgb(30, 30, 30)" points="17.5844922 4.97787611 13 10 10 10 13.5 6 1.15176941e-12 6 1.15176941e-12 4 13.5 4 10 1.42108547e-13 13 1.42108547e-13"></polygon></svg>');
+    background-position: center center;
+    background-repeat: no-repeat;
+}

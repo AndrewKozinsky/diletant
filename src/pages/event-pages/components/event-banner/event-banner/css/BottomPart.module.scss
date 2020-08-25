@@ -1,0 +1,139 @@
+@import "../../../../../../components/app/css/variables";
+
+// Нижняя часть
+.wrapper {
+    position: relative;
+    margin-top: 1rem;
+}
+
+:global(.eventPage) {
+    .wrapper {
+        display: none;
+    }
+}
+
+.part_1, .part_2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    opacity: 1;
+    border-bottom: none;
+
+    &:hover {
+        border-bottom: none;
+
+        .theme {
+            border-bottom: 1px solid $link-border-color-hover;
+            transition: border-bottom-color .1s;
+        }
+    }
+}
+
+:global(._1_show__2_hide) {
+    .part_2 {
+        position: absolute;
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+    }
+    .part_1 {
+        position: relative;
+    }
+}
+:global(._1_hide__2_show) {
+    .part_1 {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+    }
+    .part_2 {
+        position: relative;
+    }
+}
+:global(._2_hide__1_show) {
+    .part_2 {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-$banner-move-dist);
+    }
+    .part_1 {
+        position: relative;
+    }
+}
+:global(._2_show__1_hide) {
+    .part_1 {
+        position: absolute;
+        opacity: 0;
+        transform: translateX($banner-move-dist);
+    }
+    .part_2 {
+        position: relative;
+    }
+}
+
+:global(.trn) {
+    .part_1, .part_2 {
+        transition: color .15s, transform $banner-animation-duration $cubic-bezier, opacity $banner-animation-duration ease-in-out;
+    }
+}
+
+
+.city {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.speaker {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin-bottom: 6px;
+}
+.theme {
+    display: inline;
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    font-weight: 700;
+
+    transition: border-bottom-color .2s;
+    border-bottom: 1px solid $link-border-color;
+    margin-bottom: 10px;
+
+}
+
+@media (min-width: 400px) {
+    .city {
+        font-size: 3.4rem;
+        line-height: 3.8rem;
+        margin-bottom: 17px;
+    }
+    .speaker {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 4px;
+    }
+    .theme {
+        font-size: 3.2rem;
+        line-height: 4.3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .city {
+        display: none;
+    }
+    .speaker {
+        font-size: 1.8rem;
+        margin-bottom: 7px;
+    }
+    .theme {
+        font-size: 4.2rem;
+        line-height: 5.4rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .wrapper, .speaker, .theme {
+        display: none;
+    }
+}

@@ -1,0 +1,95 @@
+@import "variables.scss";
+
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+/* / Подключение шрифтов */
+
+
+:root{
+    font-size: 10px;
+}
+
+
+/* Для телефонов базовый размер шрифта будет больше.*/
+@media (max-device-width: 600px) {
+    :root{
+        font-size: 12px;
+    }
+}
+
+
+/* Общие настройки страницы */
+body {
+    display: flex;
+    align-items: stretch;
+
+    font-family: Montserrat, Helvetica, sans-serif;
+    color: $text-color;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стиль ссылок */
+a {
+    color: $link-color;
+    border-bottom: 1px solid $link-border-color;
+    transition: border-bottom-color .25s;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $link-color-hover;
+        border-bottom: 1px solid $link-border-color-hover;
+        transition: border-bottom-color .1s;
+    }
+}
+
+button {
+    cursor: pointer;
+
+    &:disabled {
+        color: lighten($text-color, 50%);
+        cursor: default;
+    }
+}
+
+
+#root {
+    position: relative;
+    flex-grow: 1;
+
+    display: flex;
+    width: 100%;
+    background: rgb(249, 253, 255);
+}

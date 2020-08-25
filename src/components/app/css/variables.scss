@@ -1,0 +1,25 @@
+
+/* Text color */
+$text-color: rgb(30, 30, 30);
+
+/* Link colors */
+$link-color: $text-color;
+$link-color-hover: darken($text-color, 10%);
+$link-border-color: rgba($link-color, .2);
+$link-border-color-hover: rgba($link-border-color, .4);
+
+// Active color
+$active-color: rgb(255, 67, 56);
+$active-color-hover: adjust-hue($active-color, -5deg);
+$active-color-border: rgba($active-color, .2);
+$active-color-hover-border: rgba($active-color-hover, .4);
+
+// Border radius
+$radius: 1px;
+
+/* Animation function */
+$cubic-bezier: cubic-bezier(0,.31,.71,.99);
+
+// Баннер событий
+$banner-move-dist: 150px;
+$banner-animation-duration: .33s;

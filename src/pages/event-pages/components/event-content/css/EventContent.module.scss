@@ -1,0 +1,96 @@
+@import "../../../../../components/app/css/variables";
+
+
+.generalWrapper {
+    position: relative;
+    margin-top: 2rem;
+}
+
+
+
+.city {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.speaker {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin-bottom: 6px;
+}
+.theme {
+    display: inline;
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    font-weight: 700;
+
+    transition: border-bottom-color .2s;
+    border-bottom: 1px solid $link-border-color;
+    margin-bottom: 10px;
+
+}
+
+@media (min-width: 400px) {
+    .city {
+        font-size: 3.4rem;
+        line-height: 3.8rem;
+        margin-bottom: 17px;
+    }
+    .speaker {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 4px;
+    }
+    .theme {
+        font-size: 3.2rem;
+        line-height: 4.3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .city {
+        display: none;
+    }
+    .speaker {
+        font-size: 1.8rem;
+        margin-bottom: 7px;
+    }
+    .theme {
+        font-size: 4.2rem;
+        line-height: 5.4rem;
+    }
+}
+
+@media (min-width: 1150px) {
+    .wrapper, .speaker, .theme {
+        display: none;
+    }
+}
+
+
+.textContent {
+    margin-top: 2rem;
+
+    p:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.date {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.address {
+    margin-bottom: 2rem;
+}
+
+.mapWrapper {
+    display: flex;
+    margin-top: 2rem;
+    height: 500px;
+    background-color: white;
+}

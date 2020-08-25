@@ -1,0 +1,88 @@
+@import "../../../../../../../components/app/css/variables";
+
+.cuttingRectangle {
+    height: 53px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba($text-color, .5);
+}
+@media (min-width: 700px) {
+    .cuttingRectangle {
+        height: 73px;
+    }
+}
+
+.section {
+    max-width: 1450px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: visible;
+}
+
+@media (min-width: 480px) {
+    .section {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 600px) {
+    .section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .section {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+}
+
+@media (min-width: 1650px) {
+    .section {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    transition: left .2s;
+}
+@media (min-width: 700px) {
+    .wrapper {
+        gap: 5rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-size: 7rem;
+    line-height: 7.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px $text-color;
+    background-color: transparent;
+
+    padding: 0;
+    border: none;
+}
+@media (min-width: 700px) {
+    .btn {
+        font-size: 10rem;
+        line-height: 10.6rem;
+    }
+}
+
+.btn--selected {
+    color: $text-color;
+    -webkit-text-stroke: revert;
+    cursor: default;
+}

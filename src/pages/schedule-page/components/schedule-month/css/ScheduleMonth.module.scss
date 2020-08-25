@@ -1,0 +1,178 @@
+@import '../../../../../components/app/css/variables.scss';
+
+.generalWrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.cityWrapper {
+    border-bottom: 1px solid $text-color;
+}
+
+.cityHeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+}
+.cityHeaderWrapper--opened {
+    background-color: rgb(179, 255, 224);
+}
+
+.cityHeader {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    font-weight: 600;
+}
+
+.revealBtn {
+    display: block;
+    min-width: 34px;
+    height: 34px;
+    font-size: 2rem;
+    line-height: 2rem;
+    background-color: white;
+
+    border-radius: 50%;
+    border: 1px solid $text-color;
+}
+
+.revealBtn__opened {
+    background-image: url('data:image/svg+xml;utf8,<svg width="18px" height="2px" viewBox="0 0 18 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="rgb(30, 30, 30)"  x="0" y="0" width="18" height="2"></rect></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.revealBtn__counter {
+    font-size: 2rem;
+    line-height: 2rem;
+    user-select: none;
+}
+
+.cityEventWrapper {
+    display: block;
+    padding: 20px 15px;
+    border: none;
+
+    &:hover {
+        background-color: rgb(240, 247, 251);
+        border: none;
+    }
+}
+
+.cityEventPartOne {
+    display: none;
+}
+.dayNumber_p1 {
+    font-size: 4.4rem;
+    line-height: 4.6rem;
+    margin-bottom: 5px;
+}
+.time_p1 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: rgb(150, 150, 150);
+}
+
+
+.cityEventPartTwo {
+
+}
+.speaker_p2 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 5px;
+}
+.theme_p2 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.fullDate_p2 {
+    margin-bottom: 3px;
+}
+.date_p2 {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-right: 5px;
+}
+.time_p2 {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: rgb(120, 120, 120);
+}
+.address_p2 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(150, 150, 150);
+}
+
+
+.cityEventPartThree {
+    display: none;
+}
+
+
+@media (min-width: 900px) {
+    .cityHeaderWrapper {
+        padding: 45px 20px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 50px) center;
+    }
+
+    .cityHeaderWrapper__Saint-Petersburg {
+        background-image: url("../img/Saint-Petersburg.jpg");
+    }
+    .cityHeaderWrapper__Moscow {
+        background-image: url("../img/Moscow.jpg");
+    }
+    .cityHeaderWrapper__Ufa {
+        background-image: url("../img/Ufa.jpg");
+    }
+    .cityHeaderWrapper__Ekaterinburg {
+        background-image: url("../img/Ekaterinburg.jpg");
+    }
+    .cityHeaderWrapper__Novgorod {
+        background-image: url("../img/Novgorod.jpg");
+    }
+    .cityHeaderWrapper__Orenburg {
+        background-image: url("../img/Orenburg.jpg");
+    }
+    .cityHeaderWrapper__Novosibirsk {
+        background-image: url("../img/Novosibirsk.jpg");
+    }
+    .cityHeaderWrapper__Sochi {
+        background-image: url("../img/Sochi.jpg");
+    }
+
+    .cityEventWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 20px 20px;
+
+        &:hover .cityEventPartThree {
+            background-image: url('data:image/svg+xml;utf8,<svg width="53px" height="30px" viewBox="0 0 53 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="rgb(30, 30, 30)" points="53 14.9336283 39.1822517 30 30.1401936 30 40.6892614 18 3.29477418e-12 18 3.29477418e-12 12 40.6892614 12 30.1401936 4.26325641e-13 39.1822517 4.26325641e-13"></polygon></svg>');
+        }
+    }
+
+    .cityEventPartOne {
+        display: flex;
+        align-items: center;
+        min-width: 100px;
+    }
+    .cityEventPartTwo {
+        flex-grow: 1;
+    }
+    .cityEventPartThree {
+        display: block;
+        min-width: 100px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+    }
+    .fullDate_p2 {
+        display: none;
+    }
+}

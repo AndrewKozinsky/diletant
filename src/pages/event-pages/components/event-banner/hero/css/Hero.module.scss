@@ -1,0 +1,94 @@
+@import "../../../../../../components/app/css/variables";
+
+// Контейнер
+.container {
+    position: absolute;
+    right: -15%;
+    bottom: 0;
+    z-index: 1;
+    width: 130%;
+    pointer-events: none;
+    transition: width $banner-animation-duration, right $banner-animation-duration;
+
+    //opacity: .2;  // Это можно удалить
+    //border: 1px solid red;  // Это можно удалить
+}
+
+@media (min-width: 400px) {
+    .container {
+        width: 110%;
+        right: -5%;
+    }
+    :global(.eventPage) {
+        .container {
+            width: 120%;
+            right: -10%;
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    .container {
+        width: 100%;
+        right: 0;
+    }
+    :global(.eventPage) {
+        .container {
+            width: 110%;
+            right: -5%;
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .container {
+        width: 80%;
+        right: 10%;
+    }
+    :global(.eventPage) {
+        .container {
+            width: 90%;
+            right: 5%;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 70%;
+        right: 6%;
+    }
+    :global(.eventPage) {
+        .container {
+            width: 80%;
+            right: -10%;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 600px;
+    }
+
+    :global(.eventPage) {
+        .container {
+            width: 720px;
+            right: -8%;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    :global(.eventPage) {
+        .container {
+            right: -6%;
+        }
+    }
+}
+
+
+
+
+
+
