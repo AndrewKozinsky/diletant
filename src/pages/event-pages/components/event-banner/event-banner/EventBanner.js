@@ -62,7 +62,6 @@ function EventBanner() {
             // В противном случае поставлю id первого события
             else rightEventId = events[0].id
         }
-
     }, [])
 
     // При удалении компонента привести переменную isFirstRender в начальное значение
@@ -72,7 +71,7 @@ function EventBanner() {
     // Если изменился currentEventId, значит или баннер отрисовался в первый раз
     // или нажали кнопку перехода к другому баннеру. В любом случае поставлю данные в обёртки.
     useEffect(() => {
-        // debugger
+
         if(!isFirstRender) rightEventId = currentEventId
         if(!rightEventId) rightEventId = events[0].id
 
